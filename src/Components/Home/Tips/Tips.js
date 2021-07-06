@@ -59,7 +59,6 @@ const Tips = () => {
                      <option value="mmorpg">MMORPG</option>
                      <option value="shooter">SHOOTER</option>
                      <option value="pvp">PVP</option>
-                     <option value="dd">dd</option>
                   </select>
                </form>
             </div>
