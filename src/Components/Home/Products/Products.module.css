@@ -1,0 +1,43 @@
+.productsList {
+   position: relative;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 30px;
+   margin-top: 40px;
+   padding: 0 70px;
+}
+
+.navigation { display: none; }
+
+
+@media (max-width: 768px) {
+
+   .productsList {
+      overflow: hidden;
+      display: flex;
+      grid-template-columns: none;
+      gap: 0;
+      width: 100%;
+      margin-top: 0;
+      padding: 0;
+   }
+
+   .navigation {
+      z-index: 5;
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      top: 50%;
+      width: 100%;
+   }
+   .navigation button {
+      display: flex;
+      background: transparent;
+      color: #000;
+   }
+   .navigation button svg {
+      width: 30px;
+      height: 30px;
+   }
+
+}

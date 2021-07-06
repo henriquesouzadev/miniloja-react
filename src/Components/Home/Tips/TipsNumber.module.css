@@ -1,0 +1,22 @@
+.number {
+   display: flex;
+   position: absolute;
+   top: -32px;
+   right: 10px;
+   width: 65px;
+   height: 65px;
+   font-weight: 900;
+   color: #fff;
+   background: var(--color-blue);
+   border: 2px solid var(--color-blue-dark);
+   border-radius: 5px;
+}
+.number svg {
+   font-size: 30px;
+}
+.number svg text {
+   fill: #fff;
+   stroke: var(--color-blue-dark);
+   stroke-width: 1px;
+   stroke-linejoin: round;
+}

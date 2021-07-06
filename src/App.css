@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
+:root {
+  --color-blue-dark :#084154;
+  --color-blue :#3ec6e0;
+  --color-silver :#ebebeb;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  border: none;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+div { display: block; }
+
+html, button {
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a { text-decoration: none; }
+
+.App { position: relative; }
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+.mt-40 { margin-top: 40px; }
+.mt-60 { margin-top: 60px; }
+.mt-80 { margin-top: 80px; }
+
+.mb-60 { margin-bottom: 60px; }
+.mb-80 { margin-bottom: 80px; }
+.mb-120 { margin-bottom: 120px; }
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.fullHeight {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  position: relative;
+  display: flex;
+}
+.title h1::before  {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background: var(--color-blue);
+  border-bottom-left-radius: 5px;
+  box-shadow: 12px 0px var(--color-blue), 24px 0px var(--color-blue),
+  0 12px var(--color-blue), 12px 12px var(--color-blue), 24px 12px var(--color-blue),
+  0px 24px var(--color-blue), 12px 24px var(--color-blue), 24px 24px var(--color-blue);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.title h1 {
+  display: inline-block;
+  font-weight: 300;
+  font-size: 2.5rem;
+  color: var(--color-blue-dark);
+  padding-left: 3.5rem;
+}
+
+
+/* MEDIA QUERY */
+@media (max-width: 768px) {
+  .title { flex-direction: column; }
+
+  .title h1 {
+    font-size: 1.5rem;
+    padding-left: 2.5rem;
   }
-  to {
-    transform: rotate(360deg);
+  .title h1::before {
+    width: 4px;
+    height: 4px;
+    box-shadow: 8px 0px var(--color-blue), 16px 0px var(--color-blue),
+    0 8px var(--color-blue), 8px 8px var(--color-blue), 16px 8px var(--color-blue),
+    0px 16px var(--color-blue), 8px 16px var(--color-blue), 16px 16px var(--color-blue);
+    transform: translateY(-5px);
   }
+
+  .title form { margin-top: 1rem; }
 }

@@ -1,0 +1,23 @@
+.footer {
+   position: relative;
+   display: flex;
+   color: #fff;
+   background: var(--color-blue);
+}
+
+.logo {
+   display: flex;
+   justify-content: flex-end;
+   width: 30%;
+   background: var(--color-blue-dark);
+   padding: 10px 40px;
+}
+
+.copyright {
+   display: flex;
+   align-items: center;
+   width: 70%;
+   font-size: .8rem;
+   color: #fff;
+   padding: 10px 40px;
+}
