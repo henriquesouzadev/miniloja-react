@@ -1,8 +1,8 @@
 import React from 'react';
 
 export const CartContext = React.createContext();
-export const GlobalCart = ({ children }) => {
 
+export const GlobalCart = ({ children }) => {
    const [items, setItems] = React.useState([]);
 
    function addProduct(item) {
@@ -26,5 +26,4 @@ export const GlobalCart = ({ children }) => {
          {children}
       </CartContext.Provider>
    );
-
 }
